@@ -14,10 +14,22 @@ Vizuális Hatás:
 
 # Exponential Histogram Stretching
 
-![exp.png](exponential.png)
+![exp.png](exp.png)
 
 - Vizuális Hatás: Az exponenciális kiterjesztés során a világosabb területek sokkal világosabbá válnak, míg a sötét területek kevésbé változnak. Ez a torzítás a gamma értékétől függően változik.
 - Példa: Ha a gamma értéke kevesebb mint 1, a sötét részek még sötétebbek lesznek, és a világos részek kiemelkednek. Ha a gamma értéke nagyobb mint 1, a sötét területek világosodnak, a világos részek viszont nem változnak annyira.
+
+### Understanding Gamma
+- Gamma controls the nature of the transformation:
+  - If γ>1, it tends to compress the lower intensities, making the image appear darker.
+  - If γ<1, it expands the lower intensities, making the image appear brighter.
+  - γ=1 results in a linear transformation, meaning no change in intensity.
+### Typical Range of Gamma
+- Common values for gamma typically range between 0.1 and 2.5:
+  - γ<1 (e.g., 0.5): Emphasizes details in darker regions.
+  - γ>1 (e.g., 2.0): Emphasizes details in brighter regions.
+
+The choice of gamma depends on the desired effect and the characteristics of the input image. For images that are too dark, a gamma value less than 1 helps to brighten them. For images that are too bright, a gamma value greater than 1 can darken them to enhance contrast in brighter regions.
 
 ---
 
@@ -54,3 +66,15 @@ Comparison
 Exponential Stretching can be more aggressive in contrast enhancement based on the gamma value.
 Linear Stretching evenly adjusts the entire image's contrast.
 Square Root Stretching targets dark areas for improvement, making it a middle ground between exponential and linear methods.
+
+---
+
+# Quadratic Histogram Stretching
+
+![quad.png](quadratic.png)
+
+### Összehasonlítás
+- Gyökös transzformáció: az alacsonyabb értékek jobban kiemelkednek, így a sötétebb területek világosabbá válnak, de a világosabb területek kevésbé változnak.
+- Négyzetes transzformáció: a világosabb területek kiemelése történik, miközben a sötétebb területek kontrasztja csökken.
+
+Mindkét módszer célja a kép kontrasztjának módosítása, de különböző hatásokat érnek el az egyes területeken.
