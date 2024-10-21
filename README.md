@@ -1,7 +1,5 @@
 # Linear Histogram Stretching
 
-![linear.png](linear.png)
-
 ![lineAR2.png](linear2.png)
 
 ![linear3.png](linear3.png)
@@ -13,6 +11,8 @@ Vizuális Hatás:
 ---
 
 # Exponential Histogram Stretching
+
+![linear.png](linear.png)
 
 ![exp.png](exp.png)
 
