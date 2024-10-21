@@ -78,3 +78,21 @@ Square Root Stretching targets dark areas for improvement, making it a middle gr
 - Négyzetes transzformáció: a világosabb területek kiemelése történik, miközben a sötétebb területek kontrasztja csökken.
 
 Mindkét módszer célja a kép kontrasztjának módosítása, de különböző hatásokat érnek el az egyes területeken.
+
+### Négyzetes vs. Gyökös Histogram kiegyenlítés
+
+- Gyökös transzformáció (Square Root Stretching):
+  - A gyökös transzformáció np.sqrt(normalized)-dal történik.
+  - Ez a transzformáció az alacsonyabb intenzitású pixelértékeket jobban kiemeli, így a sötétebb részek világosabbak lesznek.
+  - Az eredmény egy világosabb kép, amely hangsúlyozza a részleteket a sötétebb területeken.
+
+- Négyzetes transzformáció (Quadratic Stretching):
+  - A négyzetes transzformáció np.power(normalized, 2)-vel történik.
+  - Ez a transzformáció a magasabb intenzitású pixelértékeket erősebben felnagyítja, míg az alacsonyabbakat kevésbé érinti.
+  - Az eredmény egy sötétebb kép, amely kevesebb részletet mutat a világosabb területeken.
+  
+Összegzés
+
+*Gyökös*: Fényesebb, részletesebb képet eredményez a sötétebb részek kiemelésével.
+
+*Négyzetes*: Sötétebb, élesebb képet eredményez a világosabb részek hangsúlyozásával.
